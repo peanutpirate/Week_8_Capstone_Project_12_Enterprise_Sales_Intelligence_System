@@ -1,126 +1,82 @@
-12_PROJE_Enterprise_Sales_Intelligence_&_Decision_Support_System_Capstone
+📊 Enterprise Sales Intelligence System
 
-Gerçek senaryo: Bir şirketin **ham satış verilerini** alıp
-- temizleyen
-- dönüştüren
-- analiz eden
-- yönetime **karar desteği** sunan bir **mini analitik sistem** geliştiriyorsun.
+Bu repo, gerçek dünya satış verilerini kullanarak Enterprise Sales Intelligence System geliştirilmesini içeren bir Capstone projesi niteliğindedir. Proje, ham verileri alıp temizleme → analiz etme → karar destekte rapor üretme aşamalarından geçirerek yönetim için kullanılabilir içgörüler sağlar.
 
-## ✅ KAPSANAN TÜM KONULAR (EKSİKSİZ)
+📌 İçindekiler
 
-### 🔹 Python Core
-- Değişkenler, int / float / string
-- String metodları, slicing
-- List, dict, set, tuple
-- Bool, karşılaştırmalar
-- if / elif / else
-- for / while
-- break / continue
-- Fonksiyonlar, `args`
-- Scope (local / global)
-- try / except
+Proje modülleri:
 
-### 🔹 NumPy
-- Array & matrix oluşturma
-- Indexing & slicing
-- Matrix indexing
-- Vektörel operasyonlar
-- NumPy metodları
-- `axis` mantığı
-- `reshape`, `transpose`, `flatten`
-- `np.random`
-
-### 🔹 Pandas
-- Series & DataFrame
-- Index / reset / set
-- Multi-index
-- Eksik veriler
-- GroupBy & aggregation
-- Concat
-- Merge
-- İleri pandas operasyonlar
-- Excel okuma / yazma
-
-## 📁 GERÇEK PROJE DOSYA YAPISI
 enterprise_sales_system/
-│
-├── data_generator.py
-├── preprocessing.py
-├── analytics.py
-├── reporting.py
-└── main.ipynb
+├── data_generator.py        # Veri oluşturma ve simülasyonu
+├── preprocessing.py         # Veri temizleme & hazırlama
+├── analytics.py             # Analitik hesaplamalar
+├── reporting.py             # Raporlama ve sonuç özetleri
+└── main.ipynb               # Jupyter Notebook akışında tüm sistemi çalıştırma
 
-❗ Tek dosyada yazmak yasak
-❗Modüler yapı **zorunlu** 
+🧠 Proje Amacı
 
-## 📌 PROJE SENARYOSU (GERÇEK HAYAT)
-Şirketin elinde:
-- farklı kaynaklardan gelen satış verileri
-- eksik ve bozuk kayıtlar
-- farklı şehirler, ürünler ve dönemler
-Ama yönetim şunu istiyor:
-“Bana temiz, özet, karar aldıran bir rapor getir.”
+Bu proje ile:
 
-## 🧩 MODÜLLER VE GÖREVLER
+Farklı kaynaklardan gelen satış verileri işlenir,
 
-## 🟦 data_generator.py
-### 🔹 Veri Simülasyonu (NumPy ağırlıklı)
-- `np.random` ile:
-    - müşteri ID
-    - ürün
-    - şehir
-    - satış tutarı
-    - ay bilgisi üret
-- Bilerek:
-    - NaN değerler koy
-    - uç değerler üret
-📌 Amaç:
-**Gerçek hayattaki bozuk veri**
+Eksik/bozuk veriler mantıklı kriterlere göre düzeltilir,
 
-## 🟦 preprocessing.py
-## 🔹 Veri Temizleme (Pandas + Python)
-- Eksik verileri tespit et
-- Mantıklı stratejiyle doldur / sil
-- String kolonları normalize et
-- Yeni sütunlar üret (KDV’li satış vb.)
-- try/except ile hataya dayanıklı yap
-📌 Burada:
-- if
-- fonksiyon
-- pandas ileri işlemler zorunlu
+Pandas ve NumPy kullanılarak trendler ve ilişkiler analiz edilir,
 
-## 🟦 analytics.py
-### 🔹 Analitik Motor (NumPy + Pandas)
-- NumPy ile:
-    - normalize edilmiş matrisler
-    - performans skorları
-- Pandas ile:
-    - şehir bazlı satış
-    - ürün bazlı satış
-    - ay bazlı trend
-- GroupBy + agg yoğun kullanılır
-📌 Loop YOK → vektörel düşünce
+Yöneticiye karar desteği sağlayacak rapor çıkarılır.
 
-## 🟦 reporting.py
-### 🔹 Karar Destek Katmanı
-- En iyi / en kötü şehir
-- En kârlı ürün
-- Riskli bölgeler (düşük ortalama)
-- Yöneticiye okunabilir özet üret
-📌 Bool + if + dict + tuple kullanımı
+Kısa versiyon:
+📈 Bir şirketin ham satış verilerinden anlamlı, karar-verici sonuçlar üretmek.
 
-## 🟦 main.ipynb
-### 🔹 Sistem Akışı
-1. Proje tanımı (Markdown)
-2. Veriyi üret
-3. Temizle
-4. Analiz et
-5. Sonuçları yazdır
-6. Excel çıktısı al
+🛠️ Kullanılan Teknolojiler
 
-Örnek çıktı:
-Toplamsatış:4.820.000TL
-Enkârlı şehir: İstanbul
-Eniyiay:Mart
-Risklibölge:DoğuAnadolu
-Excelraporuoluşturuldu.
+Python
+
+Pandas & NumPy
+
+Jupyter Notebook
+
+(İsteğe bağlı) Excel çıktı alma
+
+🚀 Nasıl Çalıştırılır
+
+Repo’yu klonlayın
+
+Python ortamınızı oluşturun (venv veya conda)
+
+Gerekli paketleri yükleyin:
+
+pip install -r requirements.txt
+
+main.ipynb dosyasını çalıştırın
+
+📦 Modül Görevleri
+🔹 data_generator.py
+
+Rastgele ama gerçek hayata benzer satış verileri üretir (müşteri, ürün, şehir, vs).
+
+🔹 preprocessing.py
+
+Veri temizleme: eksik değerleri doldurma, string normalize etme vb.
+
+🔹 analytics.py
+
+Veri üzerinden trend, toplam, şehir‑ürün bazlı satış analizi yapar.
+
+🔹 reporting.py
+
+Sonuçları raporlaştırır ve yönetim için özet çıkarır.
+
+🤝 Katkıda Bulunma
+
+Bu proje açık kaynaklıdır! İstersen:
+
+Yeni metrikler ekleyebilirsin
+
+Dashboard veya grafiksel raporlar geliştirebilirsin
+
+Kod yapısını daha modüler hale getirebilirsin
+
+📝 Lisans
+
+Açık — dilediğin gibi kullanabilirsin!
